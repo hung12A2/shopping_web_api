@@ -1,0 +1,61 @@
+{
+  "ids": {
+    "User": 8,
+    "Cart": 7,
+    "Category": 4,
+    "Dish": 9,
+    "Rating": 5,
+    "Dishincart": 15,
+    "Order": 4,
+    "Dishinorder": 7
+  },
+  "models": {
+    "User": {
+      "1": "{\"fullname\":\"string\",\"email\":\"string\",\"gender\":\"string\",\"phonenumber\":\"string\",\"username\":\"admin\",\"password\":\"admin\",\"role\":\"admin\",\"id\":\"1\"}",
+      "2": "{\"fullname\":\"string\",\"email\":\"string\",\"gender\":\"string\",\"phonenumber\":\"string\",\"username\":\"customer\",\"password\":\"customer\",\"role\":\"customer\",\"id\":\"2\"}",
+      "3": "{\"fullname\":\"string\",\"email\":\"string\",\"gender\":\"string\",\"phonenumber\":\"string\",\"username\":\"customer\",\"password\":\"string\",\"role\":\"admin\",\"id\":\"3\"}",
+      "4": "{\"fullname\":\"string\",\"email\":\"string\",\"gender\":\"string\",\"phonenumber\":\"string\",\"username\":\"customer\",\"password\":\"string\",\"role\":\"customer\",\"id\":\"4\"}",
+      "7f7b404e-6781-4e07-8014-0e4295e6232b": "{\"id\":\"7f7b404e-6781-4e07-8014-0e4295e6232b\",\"fullname\":\"string\",\"email\":\"string\",\"gender\":\"string\",\"phonenumber\":\"string\",\"username\":\"admin111\",\"password\":\"string\",\"role\":\"admin\"}"
+    },
+    "Cart": {
+      "0": "{\"idOfUser\":\"1\",\"id\":\"0\"}",
+      "1": "{\"idOfUser\":\"2\",\"id\":\"1\",\"totalPrice\":1800,\"countInStock\":96}",
+      "2": "{\"totalPrice\":0,\"idOfUser\":\"3\",\"id\":\"2\"}",
+      "3": "{\"totalPrice\":0,\"idOfUser\":\"4\",\"id\":\"3\"}",
+      "4": "{\"totalPrice\":0,\"idOfUser\":\"9fe3acb3-be60-4076-9a2d-870bce51ce3f\",\"id\":\"4\"}",
+      "5": "{\"totalPrice\":0,\"idOfUser\":\"a24bffab-1a4c-42e5-8b79-675bd2df5587\",\"id\":\"5\"}",
+      "6": "{\"totalPrice\":0,\"idOfUser\":\"7f7b404e-6781-4e07-8014-0e4295e6232b\",\"id\":\"6\"}"
+    },
+    "Category": {
+      "1": "{\"catename\":\"mon phap\",\"image\":\"string\",\"id\":\"1\"}",
+      "2": "{\"catename\":\"mon y\",\"image\":\"string\",\"id\":\"2\"}",
+      "3": "{\"catename\":\"mon taybannha\",\"image\":\"string\",\"id\":\"3\"}"
+    },
+    "Dish": {
+      "1": "{\"name\":\"ca hap\",\"image\":\"string\",\"dishDescription\":\"string\",\"dishDetails\":\"string\",\"price\":100,\"countRating\":0,\"rating\":0,\"isBestSeller\":true,\"idOfCategory\":\"1\",\"id\":\"1\",\"countInStock\":96}",
+      "2": "{\"name\":\"ca nuong kieu y\",\"image\":\"string\",\"dishDescription\":\"string\",\"dishDetails\":\"string\",\"price\":100,\"countRating\":0,\"rating\":0,\"isBestSeller\":true,\"idOfCategory\":\"2\",\"id\":\"2\",\"countInStock\":92}",
+      "3": "{\"name\":\"ca nuong kieu y 1\",\"image\":\"string\",\"dishDescription\":\"string\",\"dishDetails\":\"string\",\"price\":100,\"countRating\":1,\"rating\":4,\"isBestSeller\":true,\"idOfCategory\":\"2\",\"id\":\"3\"}",
+      "4": "{\"name\":\"ca nuong kieu y 2 \",\"image\":\"string\",\"dishDescription\":\"string\",\"dishDetails\":\"string\",\"price\":100,\"countRating\":3,\"rating\":3.3333333333333335,\"isBestSeller\":true,\"idOfCategory\":\"2\",\"id\":\"4\",\"countInStock\":82}",
+      "5": "{\"name\":\"ga tay ban nha 1 \",\"image\":\"string\",\"dishDescription\":\"string\",\"dishDetails\":\"string\",\"price\":100,\"countRating\":0,\"rating\":0,\"isBestSeller\":true,\"idOfCategory\":\"3\",\"id\":\"5\",\"countInStock\":100}",
+      "6": "{\"name\":\"ga tay ban nha 4 \",\"image\":\"string\",\"dishDescription\":\"string\",\"dishDetails\":\"string\",\"price\":100,\"countRating\":0,\"rating\":0,\"isBestSeller\":true,\"idOfCategory\":\"3\",\"id\":\"6\"}",
+      "7": "{\"name\":\"string\",\"image\":\"string\",\"dishDescription\":\"string\",\"dishDetails\":\"string\",\"catename\":\"mon y\",\"price\":99,\"countRating\":0,\"rating\":0,\"isBestSeller\":true,\"idOfCategory\":\"2\",\"id\":\"7\",\"countInStock\":100}",
+      "8": "{\"name\":\"mon an cho vua\",\"image\":\"string\",\"dishDescription\":\"string\",\"dishDetails\":\"string\",\"catename\":\"mon phap\",\"price\":0,\"countRating\":0,\"rating\":0,\"isBestSeller\":true,\"idOfCategory\":\"1\",\"id\":\"8\",\"countInStock\":100}"
+    },
+    "Rating": {
+      "0": "{\"rating\":4,\"comment\":\"ngon, yummy\",\"idOfUser\":\"1\",\"idOfDish\":\"3\",\"id\":\"0\"}",
+      "2": "{\"rating\":3,\"comment\":\"mon an binh thuong\",\"idOfUser\":\"1\",\"idOfDish\":\"4\",\"id\":\"2\"}",
+      "3": "{\"rating\":5,\"comment\":\"mon an kha ngon\",\"idOfUser\":\"1\",\"idOfDish\":\"4\",\"id\":\"3\"}",
+      "4": "{\"rating\":2,\"comment\":\"mon an nhu con cac\",\"idOfUser\":\"1\",\"idOfDish\":\"4\",\"id\":\"4\"}"
+    },
+    "Dishincart": {},
+    "Order": {
+      "1": "{\"idOfUser\":\"2\",\"shippingAddress\":\"khu 2 hoang cuong thanh 3 phu tho\",\"paymentMethod\":\"tien mat\",\"shippingPrice\":10,\"totalPrice\":0,\"id\":\"1\"}",
+      "2": "{\"idOfUser\":\"2\",\"shippingAddress\":\"khu 2 thanh thủy\",\"paymentMethod\":\"tiền mặt\",\"shippingPrice\":0,\"totalPrice\":1800,\"id\":\"2\",\"accepted\":false}"
+    },
+    "Dishinorder": {
+      "1": "{\"idOfOrder\":\"2\",\"idOfDish\":\"1\",\"quantity\":2,\"id\":\"1\",\"canceled\":true}",
+      "2": "{\"idOfOrder\":\"2\",\"idOfDish\":\"2\",\"quantity\":4,\"id\":\"2\",\"canceled\":true}",
+      "3": "{\"idOfOrder\":\"2\",\"idOfDish\":\"4\",\"quantity\":9,\"id\":\"3\",\"canceled\":true}"
+    }
+  }
+}
