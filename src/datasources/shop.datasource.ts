@@ -1,24 +1,24 @@
 import {inject, lifeCycleObserver, LifeCycleObserver} from '@loopback/core';
 import {juggler} from '@loopback/repository';
 
-// const config = {
-//   name: 'shop',
-//   connector: 'memory',
-//   localStorage: '',
-//   //file: '',
-//   file: '/shopweb_api/src/data/db.json'
-// };
-
 const config = {
-  name: 'demo',
-  connector: 'postgresql',
-  url: '',
-  host: 'localhost',
-  port: 5432,
-  user: 'postgres',
-  password: 'postgres',
-  database: 'shopping'
+  name: 'shop',
+  connector: 'memory',
+  localStorage: '',
+  //file: '',
+  file: '/prj2/shopweb_api/src/data/db.json'
 };
+
+// const config = {
+//   name: 'demo',
+//   connector: 'postgresql',
+//   url: '',
+//   host: 'localhost',
+//   port: 5432,
+//   user: 'postgres',
+//   password: 'postgres',
+//   database: 'shopping'
+// };
 
 // Observe application's life cycle to disconnect the datasource when
 // application is stopped. This allows the application to be shut down

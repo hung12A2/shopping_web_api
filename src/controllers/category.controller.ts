@@ -1,6 +1,6 @@
-import {authenticate} from '@loopback/authentication';
-import {authorize} from '@loopback/authorization';
-import {inject} from '@loopback/core';
+import { authenticate } from '@loopback/authentication';
+import { authorize } from '@loopback/authorization';
+import { inject } from '@loopback/core';
 import {
   Filter,
   FilterExcludingWhere,
@@ -18,12 +18,11 @@ import {
   requestBody,
   response
 } from '@loopback/rest';
-import {Category} from '../models';
-import {CategoryRepository} from '../repositories';
-import {basicAuthorization} from '../services';
+import { Category } from '../models';
+import { CategoryRepository } from '../repositories';
+import { basicAuthorization } from '../services';
 
-@authenticate('jwt')
-@authorize({allowedRoles: ['admin'], voters: [basicAuthorization]})
+
 export class CategoryController {
   constructor(
     @repository(CategoryRepository)
@@ -32,10 +31,12 @@ export class CategoryController {
     private response: Response,
   ) { }
 
+  @authenticate('jwt')
+  @authorize({ allowedRoles: ['admin'], voters: [basicAuthorization] })
   @post('/categories')
   @response(200, {
     description: 'Category model instance',
-    content: {'application/json': {schema: getModelSchemaRef(Category)}},
+    content: { 'application/json': { schema: getModelSchemaRef(Category) } },
   })
   async create(
     @requestBody({
@@ -50,7 +51,7 @@ export class CategoryController {
     })
     category: Omit<Category, 'id'>,
   ): Promise<Category> {
-    if ((await this.categoryRepository.find({where: {catename: category.catename}})).length > 0) {
+    if ((await this.categoryRepository.find({ where: { catename: category.catename } })).length > 0) {
       this.response.status(400).send("Đã tồn tại catename này rồi ")
     }
     return this.categoryRepository.create(category);
@@ -63,15 +64,18 @@ export class CategoryController {
       'application/json': {
         schema: {
           type: 'array',
-          items: getModelSchemaRef(Category, {includeRelations: true}),
+          items: getModelSchemaRef(Category, { includeRelations: true }),
         },
       },
     },
   })
   async find(
     @param.filter(Category) filter?: Filter<Category>,
-  ): Promise<Category[]> {
-    return this.categoryRepository.find(filter);
+  ): Promise<any> {
+    const data =  await this.categoryRepository.find(filter);
+    this.response.header('Access-Control-Expose-Headers', 'Content-Range')
+    return this.response.header('Content-Range', 'categories 0-20/20').send(data);
+
   }
 
   @get('/categories/{id}')
@@ -79,17 +83,19 @@ export class CategoryController {
     description: 'Category model instance',
     content: {
       'application/json': {
-        schema: getModelSchemaRef(Category, {includeRelations: true}),
+        schema: getModelSchemaRef(Category, { includeRelations: true }),
       },
     },
   })
   async findById(
     @param.path.string('id') id: string,
-    @param.filter(Category, {exclude: 'where'}) filter?: FilterExcludingWhere<Category>
+    @param.filter(Category, { exclude: 'where' }) filter?: FilterExcludingWhere<Category>
   ): Promise<Category> {
     return this.categoryRepository.findById(id, filter);
   }
 
+  @authenticate('jwt')
+  @authorize({ allowedRoles: ['admin'], voters: [basicAuthorization] })
   @patch('/categories/{id}')
   @response(204, {
     description: 'Category PATCH success',
@@ -120,6 +126,8 @@ export class CategoryController {
   }
 
 
+  @authenticate('jwt')
+  @authorize({ allowedRoles: ['admin'], voters: [basicAuthorization] })
   @del('/categories/{id}')
   @response(204, {
     description: 'Category DELETE success',

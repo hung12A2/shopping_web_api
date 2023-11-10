@@ -1,61 +1,60 @@
 {
   "ids": {
-    "User": 8,
-    "Cart": 7,
-    "Category": 4,
-    "Dish": 9,
-    "Rating": 5,
-    "Dishincart": 15,
-    "Order": 4,
-    "Dishinorder": 7
+    "User": 7,
+    "Cart": 6,
+    "Category": 7,
+    "Dish": 10,
+    "Rating": 0,
+    "Dishincart": 9,
+    "Order": 5,
+    "Dishinorder": 9
   },
   "models": {
     "User": {
-      "1": "{\"fullname\":\"string\",\"email\":\"string\",\"gender\":\"string\",\"phonenumber\":\"string\",\"username\":\"admin\",\"password\":\"admin\",\"role\":\"admin\",\"id\":\"1\"}",
-      "2": "{\"fullname\":\"string\",\"email\":\"string\",\"gender\":\"string\",\"phonenumber\":\"string\",\"username\":\"customer\",\"password\":\"customer\",\"role\":\"customer\",\"id\":\"2\"}",
-      "3": "{\"fullname\":\"string\",\"email\":\"string\",\"gender\":\"string\",\"phonenumber\":\"string\",\"username\":\"customer\",\"password\":\"string\",\"role\":\"admin\",\"id\":\"3\"}",
-      "4": "{\"fullname\":\"string\",\"email\":\"string\",\"gender\":\"string\",\"phonenumber\":\"string\",\"username\":\"customer\",\"password\":\"string\",\"role\":\"customer\",\"id\":\"4\"}",
-      "7f7b404e-6781-4e07-8014-0e4295e6232b": "{\"id\":\"7f7b404e-6781-4e07-8014-0e4295e6232b\",\"fullname\":\"string\",\"email\":\"string\",\"gender\":\"string\",\"phonenumber\":\"string\",\"username\":\"admin111\",\"password\":\"string\",\"role\":\"admin\"}"
+      "4f5c3c5d-4554-41e8-a84e-fd56fd68d23f": "{\"id\":\"4f5c3c5d-4554-41e8-a84e-fd56fd68d23f\",\"fullname\":\"Nguyễn Việt Hưng3\",\"email\":\"hung1311197820302@gmail.com\",\"gender\":\"Nam\",\"phonenumber\":\"0915047678\",\"username\":\"hung1311\",\"password\":\"123\",\"role\":\"customer\"}",
+      "f4a2ae98-0a27-4df3-8e40-aec28beb1d8f": "{\"id\":\"f4a2ae98-0a27-4df3-8e40-aec28beb1d8f\",\"fullname\":\"Nguyễn Việt Hưng3\",\"email\":\"hung1311197820302@gmail.com\",\"gender\":\"Nam\",\"phonenumber\":\"0915047678\",\"username\":\"hung13112\",\"password\":\"123\",\"role\":\"customer\"}",
+      "7af98571-9893-41b2-8e50-b381b24d5127": "{\"id\":\"7af98571-9893-41b2-8e50-b381b24d5127\",\"fullname\":\"Nguyễn Việt Hưng3\",\"email\":\"hung1311197820302@gmail.com\",\"gender\":\"Nam\",\"phonenumber\":\"0915047678\",\"username\":\"hung131123\",\"password\":\"123\",\"role\":\"customer\"}",
+      "fda0c2a9-5f6b-483b-9bf6-7c2d77e05877": "{\"id\":\"fda0c2a9-5f6b-483b-9bf6-7c2d77e05877\",\"fullname\":\"Nguyễn Việt Hưng3\",\"email\":\"hung1311197820302@gmail.com\",\"gender\":\"Nam\",\"phonenumber\":\"0915047678\",\"username\":\"hung1311234\",\"password\":\"123\",\"role\":\"customer\"}",
+      "119d57d8-1c20-4575-a72a-69d62842ac86": "{\"id\":\"119d57d8-1c20-4575-a72a-69d62842ac86\",\"fullname\":\"string\",\"email\":\"string\",\"gender\":\"string\",\"phonenumber\":\"string\",\"username\":\"admin\",\"password\":\"admin\",\"role\":\"admin\"}",
+      "40e40285-bf36-42f6-a5df-433da59c80bc": "{\"id\":\"40e40285-bf36-42f6-a5df-433da59c80bc\",\"fullname\":\"string\",\"email\":\"string\",\"gender\":\"string\",\"phonenumber\":\"string\",\"username\":\"customer\",\"password\":\"customer\",\"role\":\"customer\"}",
+      "0bde96f8-913e-49d7-8947-aff09fcd9610": "{\"id\":\"0bde96f8-913e-49d7-8947-aff09fcd9610\",\"fullname\":\"string\",\"email\":\"string\",\"gender\":\"string\",\"phonenumber\":\"string\",\"username\":\"customer2\",\"password\":\"customer2\",\"role\":\"customer\"}"
     },
     "Cart": {
-      "0": "{\"idOfUser\":\"1\",\"id\":\"0\"}",
-      "1": "{\"idOfUser\":\"2\",\"id\":\"1\",\"totalPrice\":1800,\"countInStock\":96}",
-      "2": "{\"totalPrice\":0,\"idOfUser\":\"3\",\"id\":\"2\"}",
-      "3": "{\"totalPrice\":0,\"idOfUser\":\"4\",\"id\":\"3\"}",
-      "4": "{\"totalPrice\":0,\"idOfUser\":\"9fe3acb3-be60-4076-9a2d-870bce51ce3f\",\"id\":\"4\"}",
-      "5": "{\"totalPrice\":0,\"idOfUser\":\"a24bffab-1a4c-42e5-8b79-675bd2df5587\",\"id\":\"5\"}",
-      "6": "{\"totalPrice\":0,\"idOfUser\":\"7f7b404e-6781-4e07-8014-0e4295e6232b\",\"id\":\"6\"}"
+      "2da14d4c-bdb9-4ff9-96f3-a95c4da565c6": "{\"id\":\"2da14d4c-bdb9-4ff9-96f3-a95c4da565c6\",\"totalPrice\":0,\"idOfUser\":\"4f5c3c5d-4554-41e8-a84e-fd56fd68d23f\"}",
+      "745aa2bd-57a1-4c20-865e-703838abc821": "{\"id\":\"745aa2bd-57a1-4c20-865e-703838abc821\",\"totalPrice\":0,\"idOfUser\":\"f4a2ae98-0a27-4df3-8e40-aec28beb1d8f\"}",
+      "46f9fd0a-393f-403a-8fcd-18ac9e85b570": "{\"id\":\"46f9fd0a-393f-403a-8fcd-18ac9e85b570\",\"totalPrice\":0,\"idOfUser\":\"7af98571-9893-41b2-8e50-b381b24d5127\"}",
+      "4edf8b18-2deb-467e-9849-9bb9e6e8ef21": "{\"id\":\"4edf8b18-2deb-467e-9849-9bb9e6e8ef21\",\"totalPrice\":0,\"idOfUser\":\"fda0c2a9-5f6b-483b-9bf6-7c2d77e05877\"}",
+      "f45fd38c-4af3-4829-8065-b6b023a9314b": "{\"id\":\"f45fd38c-4af3-4829-8065-b6b023a9314b\",\"totalPrice\":1024,\"idOfUser\":\"40e40285-bf36-42f6-a5df-433da59c80bc\"}",
+      "8d8195f0-df5f-4b80-b957-2d591140e5e2": "{\"id\":\"8d8195f0-df5f-4b80-b957-2d591140e5e2\",\"totalPrice\":0,\"idOfUser\":\"0bde96f8-913e-49d7-8947-aff09fcd9610\"}"
     },
     "Category": {
-      "1": "{\"catename\":\"mon phap\",\"image\":\"string\",\"id\":\"1\"}",
-      "2": "{\"catename\":\"mon y\",\"image\":\"string\",\"id\":\"2\"}",
-      "3": "{\"catename\":\"mon taybannha\",\"image\":\"string\",\"id\":\"3\"}"
+      "178dfb82-6794-4910-a652-e4bce5dbda32": "{\"id\":\"178dfb82-6794-4910-a652-e4bce5dbda32\",\"catename\":\"adacxzxz\",\"image\":\"https://th.bing.com/th/id/R.bb686cb2a50a7b4002b6a5b557fe5c1c?rik=ZWgkjZb0OVlFjQ&pid=ImgRaw&r=0\"}",
+      "0e97e4cf-efb5-49a3-8f62-1eadd72558b7": "{\"id\":\"0e97e4cf-efb5-49a3-8f62-1eadd72558b7\",\"catename\":\"ada\",\"image\":\"https://hoaianshop.com/wp-content/uploads/2021/02/hinh-anh-con-cho.jpg\"}",
+      "3ce8bb9b-9728-4927-996d-49e6deb113ee": "{\"id\":\"3ce8bb9b-9728-4927-996d-49e6deb113ee\",\"catename\":\"món ý\",\"image\":\"https://th.bing.com/th/id/R.7aa43b384e5953db75e44c8936b65c07?rik=tdE5q1pLqbqNUA&pid=ImgRaw&r=0\"}",
+      "04ef5b23-1533-4234-90ea-68f719ce3de5": "{\"id\":\"04ef5b23-1533-4234-90ea-68f719ce3de5\",\"catename\":\"newCate\",\"image\":\"https://i5.walmartimages.com/asr/e03de7a8-c0a3-48ed-a107-6eec5ebddfaa_1.920a6b4429182a0c2a9291ff5824464f.jpeg\"}"
     },
     "Dish": {
-      "1": "{\"name\":\"ca hap\",\"image\":\"string\",\"dishDescription\":\"string\",\"dishDetails\":\"string\",\"price\":100,\"countRating\":0,\"rating\":0,\"isBestSeller\":true,\"idOfCategory\":\"1\",\"id\":\"1\",\"countInStock\":96}",
-      "2": "{\"name\":\"ca nuong kieu y\",\"image\":\"string\",\"dishDescription\":\"string\",\"dishDetails\":\"string\",\"price\":100,\"countRating\":0,\"rating\":0,\"isBestSeller\":true,\"idOfCategory\":\"2\",\"id\":\"2\",\"countInStock\":92}",
-      "3": "{\"name\":\"ca nuong kieu y 1\",\"image\":\"string\",\"dishDescription\":\"string\",\"dishDetails\":\"string\",\"price\":100,\"countRating\":1,\"rating\":4,\"isBestSeller\":true,\"idOfCategory\":\"2\",\"id\":\"3\"}",
-      "4": "{\"name\":\"ca nuong kieu y 2 \",\"image\":\"string\",\"dishDescription\":\"string\",\"dishDetails\":\"string\",\"price\":100,\"countRating\":3,\"rating\":3.3333333333333335,\"isBestSeller\":true,\"idOfCategory\":\"2\",\"id\":\"4\",\"countInStock\":82}",
-      "5": "{\"name\":\"ga tay ban nha 1 \",\"image\":\"string\",\"dishDescription\":\"string\",\"dishDetails\":\"string\",\"price\":100,\"countRating\":0,\"rating\":0,\"isBestSeller\":true,\"idOfCategory\":\"3\",\"id\":\"5\",\"countInStock\":100}",
-      "6": "{\"name\":\"ga tay ban nha 4 \",\"image\":\"string\",\"dishDescription\":\"string\",\"dishDetails\":\"string\",\"price\":100,\"countRating\":0,\"rating\":0,\"isBestSeller\":true,\"idOfCategory\":\"3\",\"id\":\"6\"}",
-      "7": "{\"name\":\"string\",\"image\":\"string\",\"dishDescription\":\"string\",\"dishDetails\":\"string\",\"catename\":\"mon y\",\"price\":99,\"countRating\":0,\"rating\":0,\"isBestSeller\":true,\"idOfCategory\":\"2\",\"id\":\"7\",\"countInStock\":100}",
-      "8": "{\"name\":\"mon an cho vua\",\"image\":\"string\",\"dishDescription\":\"string\",\"dishDetails\":\"string\",\"catename\":\"mon phap\",\"price\":0,\"countRating\":0,\"rating\":0,\"isBestSeller\":true,\"idOfCategory\":\"1\",\"id\":\"8\",\"countInStock\":100}"
+      "e748d046-f4f6-4611-bb88-c30df32b4671": "{\"id\":\"e748d046-f4f6-4611-bb88-c30df32b4671\",\"name\":\"anhr con cho\",\"image\":\"https://hoaianshop.com/wp-content/uploads/2021/02/hinh-anh-con-cho.jpg\",\"dishDescription\":\"string\",\"dishDetails\":\"string\",\"catename\":\"ada\",\"price\":12,\"countRating\":0,\"rating\":0,\"countInStock\":24,\"isBestSeller\":true,\"idOfCategory\":\"0e97e4cf-efb5-49a3-8f62-1eadd72558b7\"}",
+      "44a8b90a-7f1d-4bc3-8e6e-3aaf58e3aba3": "{\"id\":\"44a8b90a-7f1d-4bc3-8e6e-3aaf58e3aba3\",\"name\":\"hưng nguyễn\",\"image\":\"https://hoaianshop.com/wp-content/uploads/2021/02/hinh-anh-con-cho.jpg\",\"dishDescription\":\"This is a signatured fd which strongly contributed to the spread of Japanese food around the world. Beside Sushi, Tempura “awakens” all users’ senses by sophistication, harmony and richness in taste.\",\"dishDetails\":\"Món ăn ngon\",\"catename\":\"món ý\",\"price\":30,\"countRating\":0,\"rating\":0,\"countInStock\":9,\"isBestSeller\":true,\"idOfCategory\":\"3ce8bb9b-9728-4927-996d-49e6deb113ee\"}",
+      "92119f2b-69cc-451f-96f1-5f747044fe1d": "{\"id\":\"92119f2b-69cc-451f-96f1-5f747044fe1d\",\"name\":\"Thịt tró\",\"image\":\"https://hoaianshop.com/wp-content/uploads/2021/02/hinh-anh-con-cho.jpg\",\"dishDescription\":\"This is a signatured fd which strongly contributed to the spread of Japanese food around the world. Beside Sushi, Tempura “awakens” all users’ senses by sophistication, harmony and richness in taste.\",\"dishDetails\":\"ádadsa\",\"catename\":\"newCate\",\"price\":12,\"countRating\":0,\"rating\":0,\"countInStock\":12,\"isBestSeller\":false,\"idOfCategory\":\"04ef5b23-1533-4234-90ea-68f719ce3de5\"}",
+      "add94ea3-b4a1-45eb-b26a-2bd758dfb50b": "{\"id\":\"add94ea3-b4a1-45eb-b26a-2bd758dfb50b\",\"name\":\"hưng nguyễncv\",\"image\":\"https://th.bing.com/th/id/OIP.9qyol8QmulLubpEGWbZ1-gHaE6?pid=ImgDet&rs=1\",\"dishDescription\":\"This is a signatured fd which strongly contributed to the spread of Japanese food around the world. Beside Sushi, Tempura “awakens” all users’ senses by sophistication, harmony and richness in taste.\",\"dishDetails\":\"Món ăn ngon\",\"catename\":\"adacxzxz\",\"price\":50,\"countRating\":0,\"rating\":0,\"countInStock\":54,\"isBestSeller\":true,\"idOfCategory\":\"178dfb82-6794-4910-a652-e4bce5dbda32\"}",
+      "203af636-417d-412a-b348-00fa41886b44": "{\"id\":\"203af636-417d-412a-b348-00fa41886b44\",\"name\":\"món ăn cực ngon\",\"image\":\"https://th.bing.com/th/id/R.89fba507adab8a2d616503fed89c31b4?rik=4AB5oKeTR0WuBQ&riu=http%3a%2f%2f4.bp.blogspot.com%2f-kMgURZ8JF6E%2fVKFjcndtuEI%2fAAAAAAAAb6I%2fHwgGzaMCILk%2fs1600%2fchannukah5.jpg&ehk=alaGrwyHGJTC7eCGvZzaZ7H5uRkpZVBE4xnxAcZTW9w%3d&risl=&pid=ImgRaw&r=0\",\"dishDescription\":\"Món ăn ngon\",\"dishDetails\":\"ádadsa\",\"catename\":\"ada\",\"price\":50,\"countRating\":0,\"rating\":0,\"countInStock\":13,\"isBestSeller\":true,\"idOfCategory\":\"0e97e4cf-efb5-49a3-8f62-1eadd72558b7\"}",
+      "f9e201e5-89a6-4e9b-9111-bfe95f79d0bc": "{\"id\":\"f9e201e5-89a6-4e9b-9111-bfe95f79d0bc\",\"name\":\"Nước khoái :D \",\"image\":\"https://toplist.vn/images/800px/uong-nuoc-37889.jpg\",\"dishDescription\":\"Nước khoái\",\"dishDetails\":\"Khoái\",\"catename\":\"adacxzxz\",\"price\":50,\"countRating\":0,\"rating\":0,\"countInStock\":26,\"isBestSeller\":true,\"idOfCategory\":\"178dfb82-6794-4910-a652-e4bce5dbda32\"}",
+      "b37661fc-67ae-4722-85e5-d7dc81954765": "{\"id\":\"b37661fc-67ae-4722-85e5-d7dc81954765\",\"name\":\"nước khoải bản 2\",\"image\":\"https://th.bing.com/th/id/OIP.8FsivWlt4VsbCmReJdSOagHaEK?pid=ImgDet&rs=1\",\"dishDescription\":\"This is a signatured fd which strongly contributed to the spread of Japanese food around the world. Beside Sushi, Tempura “awakens” all users’ senses by sophistication, harmony and richness in taste.\",\"dishDetails\":\"Món ăn ngon\",\"catename\":\"adacxzxz\",\"price\":30,\"countRating\":0,\"rating\":0,\"countInStock\":20,\"isBestSeller\":true,\"idOfCategory\":\"178dfb82-6794-4910-a652-e4bce5dbda32\"}"
     },
-    "Rating": {
-      "0": "{\"rating\":4,\"comment\":\"ngon, yummy\",\"idOfUser\":\"1\",\"idOfDish\":\"3\",\"id\":\"0\"}",
-      "2": "{\"rating\":3,\"comment\":\"mon an binh thuong\",\"idOfUser\":\"1\",\"idOfDish\":\"4\",\"id\":\"2\"}",
-      "3": "{\"rating\":5,\"comment\":\"mon an kha ngon\",\"idOfUser\":\"1\",\"idOfDish\":\"4\",\"id\":\"3\"}",
-      "4": "{\"rating\":2,\"comment\":\"mon an nhu con cac\",\"idOfUser\":\"1\",\"idOfDish\":\"4\",\"id\":\"4\"}"
-    },
+    "Rating": {},
     "Dishincart": {},
     "Order": {
-      "1": "{\"idOfUser\":\"2\",\"shippingAddress\":\"khu 2 hoang cuong thanh 3 phu tho\",\"paymentMethod\":\"tien mat\",\"shippingPrice\":10,\"totalPrice\":0,\"id\":\"1\"}",
-      "2": "{\"idOfUser\":\"2\",\"shippingAddress\":\"khu 2 thanh thủy\",\"paymentMethod\":\"tiền mặt\",\"shippingPrice\":0,\"totalPrice\":1800,\"id\":\"2\",\"accepted\":false}"
+      "94bfedd7-ff86-4d91-9f71-307453331395": "{\"id\":\"94bfedd7-ff86-4d91-9f71-307453331395\",\"idOfUser\":\"40e40285-bf36-42f6-a5df-433da59c80bc\",\"shippingAddress\":\"khu 2 thanh thủy\",\"paymentMethod\":\"tiền mặt\",\"shippingPrice\":10,\"totalPrice\":874,\"accepted\":true,\"canceled\":false,\"isProcessed\":true}",
+      "8e51203b-53ca-4ddc-99b3-69b486ce8af1": "{\"id\":\"8e51203b-53ca-4ddc-99b3-69b486ce8af1\",\"idOfUser\":\"40e40285-bf36-42f6-a5df-433da59c80bc\",\"shippingAddress\":\"khu 8 thanh thủy\",\"paymentMethod\":\"tiền mặt\",\"shippingPrice\":15,\"totalPrice\":939,\"accepted\":false,\"canceled\":false,\"isProcessed\":true}",
+      "060ae069-962f-47d6-b839-d0ecf8a846c3": "{\"id\":\"060ae069-962f-47d6-b839-d0ecf8a846c3\",\"idOfUser\":\"40e40285-bf36-42f6-a5df-433da59c80bc\",\"shippingAddress\":\"khu 8 thanh thủy\",\"paymentMethod\":\"tiền mặt\",\"shippingPrice\":18,\"totalPrice\":1042,\"accepted\":false,\"canceled\":false,\"isProcessed\":true}"
     },
     "Dishinorder": {
-      "1": "{\"idOfOrder\":\"2\",\"idOfDish\":\"1\",\"quantity\":2,\"id\":\"1\",\"canceled\":true}",
-      "2": "{\"idOfOrder\":\"2\",\"idOfDish\":\"2\",\"quantity\":4,\"id\":\"2\",\"canceled\":true}",
-      "3": "{\"idOfOrder\":\"2\",\"idOfDish\":\"4\",\"quantity\":9,\"id\":\"3\",\"canceled\":true}"
+      "3adb3b19-3e98-443c-aa40-5f76acbdc821": "{\"id\":\"3adb3b19-3e98-443c-aa40-5f76acbdc821\",\"idOfOrder\":\"94bfedd7-ff86-4d91-9f71-307453331395\",\"idOfDish\":\"b37661fc-67ae-4722-85e5-d7dc81954765\",\"quantity\":2,\"canceled\":true}",
+      "a538aa3e-8d42-440f-94d9-0f71ab059746": "{\"id\":\"a538aa3e-8d42-440f-94d9-0f71ab059746\",\"idOfOrder\":\"94bfedd7-ff86-4d91-9f71-307453331395\",\"idOfDish\":\"e748d046-f4f6-4611-bb88-c30df32b4671\",\"quantity\":12,\"canceled\":true}",
+      "11b3d246-8c0d-435d-81ac-08f0ced6fbc2": "{\"id\":\"11b3d246-8c0d-435d-81ac-08f0ced6fbc2\",\"idOfOrder\":\"94bfedd7-ff86-4d91-9f71-307453331395\",\"idOfDish\":\"203af636-417d-412a-b348-00fa41886b44\",\"quantity\":3,\"canceled\":true}",
+      "ced5c316-95e1-4f1c-99e8-6445a2594752": "{\"id\":\"ced5c316-95e1-4f1c-99e8-6445a2594752\",\"idOfOrder\":\"8e51203b-53ca-4ddc-99b3-69b486ce8af1\",\"idOfDish\":\"b37661fc-67ae-4722-85e5-d7dc81954765\",\"quantity\":2,\"canceled\":true}",
+      "4001a02a-e7ec-4c49-86ce-0dfeb68753a0": "{\"id\":\"4001a02a-e7ec-4c49-86ce-0dfeb68753a0\",\"idOfOrder\":\"060ae069-962f-47d6-b839-d0ecf8a846c3\",\"idOfDish\":\"f9e201e5-89a6-4e9b-9111-bfe95f79d0bc\",\"quantity\":2,\"canceled\":true}"
     }
   }
 }

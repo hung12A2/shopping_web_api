@@ -19,6 +19,7 @@ import {
 } from '@loopback/rest';
 import {SecurityBindings, securityId, UserProfile} from '@loopback/security';
 import {
+  Cart,
   Dish,
   Dishinorder,
   Order
@@ -130,6 +131,11 @@ export class UserOrderController {
       totalPrice: totalPrice,
     })
     this.cartRepository.dishincarts(cartid).delete();
+    let upatecart: Cart;
+    upatecart = Object.assign ({
+      totalPrice: 0
+    })
+    this.userRepository.cart(id).patch(upatecart);
     const orderid = (await this.userRepository.orders(id).create(order)).id;
     await Promise.all(listiddishincart.map(async (iddish, index) => {
       const dish = listdish.find(dish => dish.id === iddish)

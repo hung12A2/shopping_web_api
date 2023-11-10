@@ -56,6 +56,13 @@ export class Order extends Entity {
   })
   canceled: boolean;
 
+  @property({
+    type: 'boolean',
+    required: true,
+    default: false,
+  })
+  isProcessed: boolean;
+
   @hasMany(() => Dishinorder, {keyTo: 'idOfOrder'})
   dishinorders: Dishinorder[];
 

@@ -67,7 +67,8 @@ export class OrderadminController {
       })
     }))
 
-    return orderwithdishlist;
+    this.response.header('Access-Control-Expose-Headers', 'Content-Range')
+    return this.response.header('Content-Range', 'dishes 0-20/20').send(orderwithdishlist);
   }
 
   @get('/orders/{id}')
@@ -105,7 +106,7 @@ export class OrderadminController {
     return orderwithdishlist;
   }
 
-  @patch('/orders/{orderid}')
+  @patch('/orders/{orderid}/refuse')
   @response(204, {
     description: 'Order PATCH success',
   })
@@ -114,9 +115,6 @@ export class OrderadminController {
   ): Promise<any> {
     //await this.orderRepository.updateById(id, order);
     //return accepted;
-    const order = await this.orderRepository.findById(orderid)
-    const orderaccepted = order.accepted;
-
     const dishinorderlist = await this.orderRepository.dishinorders(orderid).find();
 
     await Promise.all(dishinorderlist.map(async dishinorder => {
@@ -138,6 +136,28 @@ export class OrderadminController {
 
     const newOrder: Order = Object.assign({
       accepted: false,
+      isProcessed: true
+    })
+
+    const data = await this.orderRepository.updateById(orderid, newOrder);
+
+    this.response.status(200).send({
+      message: "update thành công",
+      data: data,
+    })
+  }
+
+  @patch('/orders/{orderid}/accept')
+  @response(204, {
+    description: 'Order PATCH success',
+  })
+  async updateByorderid2(
+    @param.path.string('orderid') orderid: string,
+  ): Promise<any> {
+ 
+    const newOrder: Order = Object.assign({
+      accepted: true,
+      isProcessed: true
     })
 
     const data = await this.orderRepository.updateById(orderid, newOrder);

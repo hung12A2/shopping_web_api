@@ -13,11 +13,10 @@ import {
   get,
   getModelSchemaRef,
   getWhereSchemaFor,
-  HttpErrors,
   param,
   patch,
   post,
-  requestBody,
+  requestBody
 } from '@loopback/rest';
 import {SecurityBindings, securityId, UserProfile} from '@loopback/security';
 import {
@@ -146,16 +145,15 @@ export class CartDishincartController {
     const dish = await this.dishRepositpry.findById(dishid);
     const olddishincart = await this.cartRepository.dishincarts(id).find({where: {'idOfDish': dishid}});
     let updateCart: Cart;
-    if (dishincart.quantity === 0) {
+    if (dishincart.quantity == 0) {
       const newTotalPrice = cart.totalPrice - olddishincart[0].quantity * (dish).price;
       updateCart = Object.assign({
         totalPrice: newTotalPrice,
       })
       await this.cartRepository.updateById(id, updateCart)
       await this.cartRepository.dishincarts(id).delete(where);
-    } else {
-      throw new HttpErrors.BadRequest('nhap quantity vao di ?')
     }
+
     if (dishincart.quantity) {
       const newTotalPrice = cart.totalPrice - olddishincart[0].quantity * (dish).price + dishincart.quantity * (dish).price;
       updateCart = Object.assign({
@@ -163,9 +161,8 @@ export class CartDishincartController {
       })
       await this.cartRepository.updateById(id, updateCart)
       await this.cartRepository.dishincarts(id).patch(dishincart, where);
-    } else {
-      throw new HttpErrors.BadRequest('nhap quantity vao di ?')
     }
+
     // return this.cartRepository.findById(id);
   }
 

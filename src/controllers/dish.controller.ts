@@ -15,10 +15,11 @@ import {
   param,
   patch,
   requestBody,
-  response
+  response,
+  post
 } from '@loopback/rest';
 import {Dish} from '../models';
-import {DishRepository} from '../repositories';
+import {CategoryRepository, DishRepository} from '../repositories';
 import {basicAuthorization} from '../services';
 
 
@@ -27,8 +28,41 @@ export class DishController {
     @repository(DishRepository)
     public dishRepository: DishRepository,
     @inject(RestBindings.Http.RESPONSE)
-    private response: Response
+    private response: Response,
+    @repository (CategoryRepository)
+    private categoryRepository: CategoryRepository
   ) { }
+
+  @post('/dishes', {
+    responses: {
+      '200': {
+        description: 'Category model instance',
+        content: {'application/json': {schema: getModelSchemaRef(Dish, )}},
+      },
+    },
+  })
+  @authenticate('jwt')
+  @authorize({allowedRoles: ['admin'], voters: [basicAuthorization]})
+  async create(
+    @requestBody({
+      content: {
+        'application/json': {
+          schema: getModelSchemaRef(Dish, {
+            title: 'NewDishInCategory',
+            exclude: ['id' ,'catename', 'countRating', 'rating' ],
+            optional: ['idOfCategory']
+          }),
+        },
+      },
+    }) dish: Omit<Dish, 'id'>,
+  ): Promise<any> {
+    if ((await this.dishRepository.find({where: {name: dish.name}})).length > 0) {
+      return this.response.status(400).send("Đã tồn tại tên món ăn này rồi ")
+    }
+    dish.catename = (await this.categoryRepository.findById(dish.idOfCategory)).catename
+    return this.categoryRepository.dishes(dish.idOfCategory).create(dish);
+  }
+
 
   @get('/dishes')
   @response(200, {
@@ -38,6 +72,7 @@ export class DishController {
         schema: {
           type: 'array',
           items: getModelSchemaRef(Dish, {includeRelations: true}),
+          
         },
       },
     },
@@ -45,7 +80,7 @@ export class DishController {
   async find(
     @param.filter(Dish) filter?: Filter<Dish>,
   ): Promise<any> {
-    return await ((await this.dishRepository.find(filter)).map(dish => {
+    const data =  await ((await this.dishRepository.find(filter)).map(dish => {
       return {
         id: dish.id,
         catename: dish.catename,
@@ -54,8 +89,13 @@ export class DishController {
         image: dish.image,
         price: dish.price,
         isBestSeller: dish.isBestSeller,
+        name: dish.name,
+        dishDescription: dish.dishDescription,
+        dishDetails: dish.dishDetails
       }
     }))
+    this.response.header('Access-Control-Expose-Headers', 'Content-Range')
+    return this.response.header('Content-Range', 'dishes 0-20/20').send(data);
   }
 
 

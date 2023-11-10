@@ -51,12 +51,14 @@ export class Dish extends Entity {
   @property({
     type: 'number',
     required: true,
+    default: 0
   })
   countRating: number;
 
   @property({
     type: 'number',
     required: true,
+    default: 0
   })
   rating: number;
 
